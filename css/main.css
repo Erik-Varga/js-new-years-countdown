@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600;1,700&family=Poppins&family=Quicksand&family=Raleway&family=Roboto&display=swap');
+
+
+:root {
+  --font: 'Poppins';
+  --width: 150px;
+  --height: 150px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font), sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: black;
+  background: #2f363e;
+}
+
+h2 {
+  font: 800 40px inherit;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  text-shadow: 3px 4px 5px black;
+}
+
+.newYear {
+  font-size: 8em;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 0.6em;
+}
+
+.newYear span
+{
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+#time {
+  display: flex;
+  gap: 10px;
+}
+
+#time .circle {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time .circle svg {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 8;
+  stroke: #282828;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#time div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(-10%);
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#time .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+#time .dots::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr),
+              0 0 60px var(--clr);
+}
+
+
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  color: rgba(255, 255, 0, 0.76);
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+  color: yellow;
+}
+
+footer a:hover {
+  filter: brightness(110%);
+	transition: 0.3s;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+  #time {
+    flex-direction: column;
+    transition: 0.8s;
+  }
+}
